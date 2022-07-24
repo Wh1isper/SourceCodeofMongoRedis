@@ -50,3 +50,8 @@ def delete(people_id):
         delete_result = manager.del_info(people_id)
         return json.dumps({'success': delete_result})
     return json.dumps({'success': False, 'reason': 'ID必需为数字'})
+
+
+# It's good to set an entrypoint for debugging in IDE
+if __name__ == '__main__':
+    app.run()
